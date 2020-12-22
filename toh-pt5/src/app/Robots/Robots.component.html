@@ -1,0 +1,10 @@
+<h2>My Robots</h2>
+<ul class="robots">
+  <li *ngFor="let robot of robots">
+    <a (click)= "setCurrentRobot(robot)">
+      <span class="badge">{{robot.id}}</span> {{robot.name}}
+    </a>
+  </li>
+</ul>
+
+<button (click)= "addRobot()">add a new robot</button>

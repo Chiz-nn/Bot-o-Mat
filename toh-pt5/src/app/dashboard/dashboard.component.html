@@ -1,0 +1,14 @@
+<h3>Top Robots</h3>
+
+<p>Click a robot to start performing tasks</p>>
+
+<div class= "Wrapper">
+  <div class = "test" *ngFor="let robot of robots" (click)="startTasks(robot.name)">
+      <h4>{{robot.name}}</h4>
+     <div class="tasklist" *ngFor = "let task of robot.task">
+         {{task.description}}
+     </div>
+  </div>
+</div>
+
+

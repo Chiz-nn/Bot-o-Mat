@@ -1,0 +1,61 @@
+<div class = Wrapper>
+  <div class = "formField">
+    <h2>Details</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose Your Robot Type</mat-label>
+        <mat-select [(ngModel)]="RobotidName">
+          <mat-option *ngFor="let name of idNames" [value]="name">
+            {{name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+
+        <label>RobotName:
+          <input [(ngModel)]="RobotName" placeholder="name" (keyup.enter)="addnewRobot()"/>
+        </label>
+      </div> 
+      <button (click)="addnewRobot()">Add Robot</button>
+      <p></p>
+      <button (click)="goBack()">go back</button>
+
+      
+  </div>
+
+    <div class= "robotdetails">
+      
+      <div *ngIf="hasDetails" >  
+      <h2> Your Current Robot details are displayed below</h2>
+      <h2>You can create a new robot with the formfield at the left</h2>
+      <p>Robot Name: {{RobotdisplayName}}</p>
+      <p>Robot Type: {{RobotdisplayId}}</p>
+      </div>
+
+
+
+      <div *ngIf="hasDetails">
+
+        <table>
+
+          <thead>
+              <tr>
+                  <th>Task Description</th>
+                  <th>Estimated Time (ETA)</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              <tr *ngFor="let task of robot.task">
+                  <td>{{task.description}}</td>
+                  <td>{{task.eta}}</td>
+              </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+</div>
+
