@@ -77,7 +77,6 @@ Tasks have a description and an estimated time to complete.
 ```
 
 ## Features to add once the core functionality is complete
-Be creative and have fun! Use this list or create your own features.
 - Allow users to create multiple robots at one time
 - Create a leaderboard for tasks completed by each Robot
 - Create tasks specific for each robot type, this could work in conjunction with the leaderboard. For e.g. robots that are assigned tasks that their type can’t perform won’t get “credit” for finishing the task.
@@ -86,5 +85,4 @@ Be creative and have fun! Use this list or create your own features.
 
 
 ## Authors
-- Scott Hoffman <https://github.com/scottshane>
-- Olivia Osby <https://github.com/oosby>
+- Chiz Nnodu
